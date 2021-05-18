@@ -40,13 +40,14 @@ class LoginController extends Controller
           {
             $username=$v->session()->get('user_name');
             $t=array('username'=>$username);
-            return view('loggedIn')->with($t);
+            return view('chinese')->with($t);
           }
       }
       public function logout(Request $r)
       {
             $r->session()->forget('user_id');
             $r->session()->forget('user_name');
+            $r->session()->forget('cart');
 
             return redirect('/login');
       }

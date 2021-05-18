@@ -15,7 +15,7 @@
 
   <div class="jumbotron text-center p-3 mb-0">
     <h1>Online Food Ordering App</h1>
-    <p>Resize this responsive page to see the effect!</p>
+    <p>Get your orders deliered right to your doorstep!</p>
   </div>
   <nav class="navbar navbar-expand-sm bg-light mb-3">
     <!-- Links -->
@@ -28,6 +28,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ url('/indian') }}">Indian</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url('/cart') }}">Cart</a>
       </li>
     </ul>
     <div class="w-100 order-3 dual-collapse2">
@@ -42,6 +45,8 @@
 
 
 @yield('content')
+
+@yield('scripts')
 
 </body>
 </html>

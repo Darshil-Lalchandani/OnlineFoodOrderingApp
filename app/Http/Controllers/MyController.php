@@ -10,7 +10,7 @@ class MyController extends Controller
 {
     public function home($value='')
     {
-      return view('welcome');
+      return view('registration');
     }
     public function about($value='')
     {

@@ -15,14 +15,11 @@
 
   <div class="jumbotron text-center p-3 mb-0">
     <h1>Online Food Ordering App</h1>
-    <p>Resize this responsive page to see the effect!</p>
+    <p>Get your orders delivered right to your doorstep!</p>
   </div>
   <nav class="navbar navbar-expand-sm bg-light">
     <!-- Links -->
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href=" {{ url('/') }}">Home</a>
-      </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ url('/register') }}">Register</a>
       </li>

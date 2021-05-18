@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-  <div class="card">
+  <div class="card bg-light">
     <div class="card-body">
       @if(session()->get('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -35,6 +35,10 @@
             <label> Confirm Password </label>
             <input type="text" name="upass2" class="form-control" required>
 
+          </div>
+          <div class="col-md-6">
+            <input type='checkbox' required>
+            <label> I Agree to terms and conditions </label>
           </div>
 
         </div>

@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-  <div class="card">
+  <div class="card bg-light">
     <div class="card-body">
       @if(session()->get('msg'))
         <div class="alert alert-danger alert-dismissible fade show" role="alert">

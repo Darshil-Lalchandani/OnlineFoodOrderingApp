@@ -1,7 +1,14 @@
 @extends('masterLoggedIn')
 
 @section('content')
+@if(session()->get('success'))
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <span>
+      {{ session()->get('success') }}
+    </span>
 
+  </div>
+@endif
 <div class="card-deck">
   <div class="card text-white bg-dark">
     <img class="card-img-top" src="{{URL::asset('/images/manchurian.jpg')}}" alt="manchurian">
@@ -9,7 +16,7 @@
       <h5 class="card-title">Manchurian</h5>
       <p class="card-text">An Exotic dish made of mixed vegetable steamed formed into dumplings deep fried and cooked in a tangy sauce.</p>
       <h6>₹150</h6>
-      <a href="#" class="btn btn-primary">Add to cart</a>
+      <a href="{{route('addCart', ['id' => 1])}}" class="btn btn-primary">Add to cart</a>
     </div>
     <div class="card-footer">
       <small class="text-muted">New</small>
@@ -21,7 +28,7 @@
       <h5 class="card-title">Momos</h5>
       <p class="card-text">Momo is a type of steamed dumpling with fresh vegetable filling.</p>
       <h6>₹80</h6>
-      <a href="#" class="btn btn-primary">Add to cart</a>
+      <a href="{{route('addCart', ['id' => 2])}}" class="btn btn-primary">Add to cart</a>
     </div>
     <div class="card-footer">
       <small class="text-muted">New</small>
@@ -33,7 +40,7 @@
       <h5 class="card-title">Noodles</h5>
       <p class="card-text">A narrow strip of unleavened egg dough that has been rolled thin and dried and boiled.</p>
       <h6>₹150</h6>
-      <a href="#" class="btn btn-primary">Add to cart</a>
+      <a href="{{route('addCart', ['id' => 3])}}" class="btn btn-primary">Add to cart</a>
     </div>
     <div class="card-footer">
       <small class="text-muted">Bestseller</small>
@@ -45,7 +52,7 @@
       <h5 class="card-title">Fried Rice</h5>
       <p class="card-text">Fried rice is a dish of cooked rice that has been stir-fried in a frying pan and is mixed with other ingredients such as eggs, vegetables, seafood, or meat.</p>
       <h6>₹140</h6>
-      <a href="#" class="btn btn-primary">Add to cart</a>
+      <a href="{{route('addCart', ['id' => 4])}}" class="btn btn-primary">Add to cart</a>
     </div>
     <div class="card-footer">
       <small class="text-muted">Bestseller</small>

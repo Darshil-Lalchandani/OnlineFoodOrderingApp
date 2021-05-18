@@ -24,3 +24,8 @@ Route::post('/check', 'App\Http\Controllers\LoginController@loginCheck');
 Route::get('/chinese', 'App\Http\Controllers\Menu@chinese');
 Route::get('/italian', 'App\Http\Controllers\Menu@italian');
 Route::get('/indian', 'App\Http\Controllers\Menu@indian');
+
+Route::get('/cart', 'App\Http\Controllers\ProductsController@cart');
+Route::get('/add-to-cart/{id}', 'App\Http\Controllers\ProductsController@addToCart')->name('addCart');
+Route::patch('update-cart', 'App\Http\Controllers\ProductsController@update');
+Route::delete('remove-from-cart', 'App\Http\Controllers\ProductsController@remove');
